@@ -15,7 +15,7 @@ class TestCategory(APITestCase):
     def test_list(self):
         #creons deux catégories dont une seule est active
         category=Category.objects.create(name='Fruit',active=True)
-        category.objects.create(name='Légumes',active=False)
+        Category.objects.create(name='Légumes',active=False)
 
         #on realise l'appel en get en uttilisant le client de la classe APITestCase
         response=self.client.get(self.url)
