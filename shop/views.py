@@ -13,6 +13,7 @@ class CategoryViewset(ReadOnlyModelViewSet):
     def get_queryset(self):
         return Category.objects.filter(active=True)
     
+    
 
 class ProductViewset(ModelViewSet):
 
